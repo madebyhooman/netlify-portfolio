@@ -1,0 +1,85 @@
+body{
+    background-color: #E8E8E8;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px 25px;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar{
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 5px 25px;
+}
+.navbar a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+.navdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo a{
+    text-decoration: none;
+}
+section {
+    margin: 20px 0; 
+}
+.wrapper{
+    display: grid;
+    grid-row-gap: 10px;
+}
+.header-projects ,
+.header-certificates {
+    display: grid;
+    grid-template-columns: 1fr; 
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+}
+.projects-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+}
+.projects-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px; 
+}
+
+.project {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px; 
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 10px 10px 0 0; 
+}
+
+.project-info {
+    padding: 10px; 
+}
+
+.project-info h1 {
+    margin: 0 0 10px 0; 
+    font-size: 1.5em; 
+}
+
+.project-info p {
+    margin: 0; 
+    font-size: 1em; 
+}
