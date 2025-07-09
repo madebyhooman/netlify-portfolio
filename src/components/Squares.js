@@ -2,11 +2,11 @@ import { useRef, useEffect } from 'react';
 import './Squares.css';
 
 const Squares = ({
-  direction = 'right',
-  speed = 1,
-  borderColor = '#999',
+  direction = 'diagonal',
+  speed = .5,
+  borderColor = '#261E37',
   squareSize = 40,
-  hoverFillColor = '#222',
+  hoverFillColor = '#222222',
   className = ''
 }) => {
   const canvasRef = useRef(null);
@@ -107,29 +107,23 @@ const Squares = ({
       const hoveredSquareX = Math.floor((mouseX + gridOffset.current.x - startX) / squareSize);
       const hoveredSquareY = Math.floor((mouseY + gridOffset.current.y - startY) / squareSize);
 
-      if (
-        !hoveredSquare.current ||
-        hoveredSquare.current.x !== hoveredSquareX ||
-        hoveredSquare.current.y !== hoveredSquareY
-      ) {
-        hoveredSquare.current = { x: hoveredSquareX, y: hoveredSquareY };
-      }
+      hoveredSquare.current = { x: hoveredSquareX, y: hoveredSquareY };
     };
 
     const handleMouseLeave = () => {
       hoveredSquare.current = null;
     };
 
-    canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('mouseleave', handleMouseLeave);
+   window.addEventListener('mousemove', handleMouseMove);
+   window.addEventListener('mouseleave', handleMouseLeave);
 
     requestRef.current = requestAnimationFrame(updateAnimation);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(requestRef.current);
-      canvas.removeEventListener('mousemove', handleMouseMove);
-      canvas.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, [direction, speed, borderColor, hoverFillColor, squareSize]);
 

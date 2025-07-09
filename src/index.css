@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #060010;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,7 +10,113 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, #root {
+  height: 100%;
+}
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  position: relative;
+  min-height: calc(100vh - 150px); /* adjust footer height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  color: white;
+}
+.squares-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.squares-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  z-index: 0;
+}
+
+.two-column {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  align-items: stretch; /* make both columns full height */
+}
+
+.left-column {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
+  justify-content: center;
+}
+
+.left-column header {
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 450px;
+  z-index: 1;
+}
+
+.site-footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
