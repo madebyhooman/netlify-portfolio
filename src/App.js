@@ -1,5 +1,7 @@
 import React from 'react';
 import Squares from './components/Squares';
+import CardSwap from './components/Cardswap';
+import './index.css';
 
 function App() {
   return (
