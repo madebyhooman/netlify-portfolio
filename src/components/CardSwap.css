@@ -9,6 +9,28 @@
   overflow: visible;
 }
 
+.card-tab {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: linear-gradient(180deg, #15111f 0%, #0b0912 100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  color: #cfcfcf;
+  gap: 8px;
+}
+
+.tab-icon {
+  font-size: 16px;
+}
+
+.card-body {
+  padding: 0 20px;
+  color: #fff;
+}
+
 .card {
   position: absolute;
   top: 50%;

@@ -26,9 +26,56 @@ function App() {
                   delay={4000}
                   pauseOnHover={true}
                 >
-                  <Card><h3>Algorithm Implementation</h3><p>Your content here</p></Card>
-                  <Card><h3>Card 2</h3><p>Your content here</p></Card>
-                  <Card><h3>Card 3</h3><p>Your content here</p></Card>
+                  <Card>
+                    <div className="card-tab">
+                      <span className="tab-icon">🔫</span>
+                      <span className="tab-title">Smart Surveillance System</span>
+                      </div>
+                      <div className="card-body">
+                      <h3>Python, OpenCV, TensorFlow, YOLO</h3>
+                      <p>A smart surveillance system that uses AI for real-time monitoring and alerts.</p>
+                    </div>
+                  </Card>
+                  <Card>
+                    <div className="card-tab">
+                      <span className="tab-icon">⚙️</span>
+                      <span className="tab-title">Algorithm Implementation</span>
+                    </div>
+                    <div className="card-body">
+                      <h3>C++</h3>
+                      <p>A program automatically calculates and generates a Gantt chart with detailed computations presented in a table.</p>
+                    </div>
+                  </Card>
+                  <Card>
+                    <div className="card-tab">
+                      <span className="tab-icon">🎞️</span>
+                      <span className="tab-title">Online Photo Gallery</span>
+                    </div>
+                    <div className="card-body">
+                      <h3>HTML, CSS, JavaScript</h3>
+                      <p>Build a responsive photo gallery showcasing behind the scenes content.</p>
+                    </div>
+                  </Card>
+                  <Card>
+                    <div className="card-tab">
+                      <span className="tab-icon">🎟️</span>
+                      <span className="tab-title">Ordering System</span>
+                    </div>
+                    <div className="card-body">
+                      <h3>HTML, CSS, PHP, JavaScript, SQL, Json</h3>
+                      <p>Develop a comprehensive ordering system with user authentication and data management.</p>
+                    </div>
+                  </Card>
+                  <Card>
+                    <div className="card-tab">
+                      <span className="tab-icon">🗑️</span>
+                      <span className="tab-title">Smart Trash Bin</span>
+                    </div>
+                    <div className="card-body">
+                      <h3>Arduino, C++</h3>
+                      <p>Implement a smart trash bin that uses sensors for efficient waste management.</p>
+                    </div>
+                  </Card>
                 </CardSwap>
               </div>
             </div>
