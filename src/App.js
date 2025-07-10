@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Squares from './components/Squares';
 import CardSwap, { Card } from './components/CardSwap';
+import FuzzyText from './components/FuzzyText';
 import './index.css';
 
 function App() {
+  const section2Ref = useRef(null);
+
+  const handleRightColumnClick = () => {
+    section2Ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="App">
-      {/* Main content with Squares */}
       <div className="main-content">
-        <Squares />
+          <div className="squares-wrapper">
+            <Squares />
+          </div>
         <div className="content">
           <div className="two-column">
             <div className="left-column">
@@ -18,13 +26,13 @@ function App() {
               </header>
             </div>
 
-            <div className="right-column">
+            <div className="right-column" onClick={handleRightColumnClick}>
               <div style={{ height: '600px', position: 'relative' }}>
                 <CardSwap
                   cardDistance={30}
                   verticalDistance={120}
                   delay={4000}
-                  pauseOnHover={true}
+                  pauseOnHover={false}
                 >
                   <Card>
                     <div className="card-tab">
@@ -83,13 +91,56 @@ function App() {
         </div>
       </div>
 
+      {/* Under Development Section */}
+      <div className="under-development-section" ref={section2Ref}>
+        <FuzzyText
+          fontSize="clamp(2rem, 6vw, 4rem)"
+          fontWeight={900}
+          fontFamily="'Courier New', monospace"
+          color="#333"
+          enableHover={true}
+          baseIntensity={0.1}
+          hoverIntensity={0.2}
+        >
+          My portfolio is still a work in progress!
+        </FuzzyText>
+      </div>
+
+      {/* Section 2 — Updated projects-section */}
+      <div className="projects-section" style={{ display: 'none' }}>
+        <h2 className="projects-title">More Projects</h2>
+        <div className="projects-grid">
+          <div className="project-card">
+            <div className="card-tab">
+              <span className="tab-icon">🎨</span>
+              <span className="tab-title">Portfolio Website</span>
+            </div>
+            <div className="card-body">
+              <img src="/path/to/image.png" alt="Landscape" className="card-image" />
+              <h3>React, GSAP</h3>
+              <p>A portfolio website with animated cards and interactive elements.</p>
+            </div>
+          </div>
+          <div className="project-card">
+            <div className="card-tab">
+              <span className="tab-icon">📊</span>
+              <span className="tab-title">Data Dashboard</span>
+            </div>
+            <div className="card-body">
+              <h3>React, Chart.js</h3>
+              <p>Dynamic dashboard displaying live data visualizations and reports.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="site-footer">
         <p>&copy; 2025 Maydelene Chavez. Built with React.</p>
         <div className="footer-links">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:maydelene@example.com">Email</a>
+          <a href="https://github.com/madebyhooman" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/maydelenechavez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:maydelene.p.chavez@gmail.com">Email</a>
         </div>
       </footer>
     </div>
