@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Squares from './components/Squares';
 import CardSwap, { Card } from './components/CardSwap';
-import FuzzyText from './components/FuzzyText';
+import PixelTransition from './components/PixelTransition';
 import './index.css';
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
   return (
     <div className="App">
       <div className="main-content">
-          <div className="squares-wrapper">
-            <Squares />
-          </div>
+        <div className="squares-wrapper">
+          <Squares />
+        </div>
         <div className="content">
           <div className="two-column">
             <div className="left-column">
@@ -38,8 +38,8 @@ function App() {
                     <div className="card-tab">
                       <span className="tab-icon">🔫</span>
                       <span className="tab-title">Smart Surveillance System</span>
-                      </div>
-                      <div className="card-body">
+                    </div>
+                    <div className="card-body">
                       <h3>Python, OpenCV, TensorFlow, YOLO</h3>
                       <p>A smart surveillance system that uses AI for real-time monitoring and alerts.</p>
                     </div>
@@ -91,47 +91,196 @@ function App() {
         </div>
       </div>
 
-      {/* Under Development Section */}
-      <div className="under-development-section" ref={section2Ref}>
-        <FuzzyText
-          fontSize="clamp(2rem, 6vw, 4rem)"
-          fontWeight={900}
-          fontFamily="'Courier New', monospace"
-          color="#333"
-          enableHover={true}
-          baseIntensity={0.1}
-          hoverIntensity={0.2}
-        >
-          My portfolio is still a work in progress!
-        </FuzzyText>
-      </div>
 
       {/* Section 2 — Updated projects-section */}
-      <div className="projects-section" style={{ display: 'none' }}>
-        <h2 className="projects-title">More Projects</h2>
+      <div className="projects-section" ref={section2Ref}>
+        <div className="projects-header">
+          <div className="marquee-content">
+            <span className='marquee-text'>✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦ Projects</span>
+            <span className='marquee-text'>✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦ Projects ✦</span>
+          </div>
+        </div>
         <div className="projects-grid">
-          <div className="project-card">
+
+          <div className="project-card" onClick={() => window.open('https://github.com/madebyhooman/smart-trashbin', '_blank')}>
             <div className="card-tab">
-              <span className="tab-icon">🎨</span>
-              <span className="tab-title">Portfolio Website</span>
+              <span className="tab-icon">🗑️</span>
+              <span className="tab-title">Smart Trashbin</span>
             </div>
             <div className="card-body">
-              <img src="/path/to/image.png" alt="Landscape" className="card-image" />
-              <h3>React, GSAP</h3>
-              <p>A portfolio website with animated cards and interactive elements.</p>
+              <PixelTransition
+                firstContent={
+                  <img
+                    src='/images/smart-bin.png' alt='Smart Bin'
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                }
+                secondContent={
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "grid",
+                      placeItems: "center",
+                      backgroundColor: "#1F1A28"
+                    }}
+                  >
+                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                  </div>
+                }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="custom-pixel-card"
+              />
             </div>
           </div>
-          <div className="project-card">
+
+          <div className="project-card" onClick={() => window.open('https://github.com/madebyhooman/Matyag', '_blank')}>
             <div className="card-tab">
-              <span className="tab-icon">📊</span>
-              <span className="tab-title">Data Dashboard</span>
+              <span className="tab-icon">�</span>
+              <span className="tab-title">Smart Surveillance System</span>
             </div>
             <div className="card-body">
-              <h3>React, Chart.js</h3>
-              <p>Dynamic dashboard displaying live data visualizations and reports.</p>
+              <PixelTransition
+                firstContent={
+                  <img
+                    src='/images/matyag.png' alt='Smart Bin'
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                }
+                secondContent={
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "grid",
+                      placeItems: "center",
+                      backgroundColor: "#1F1A28"
+                    }}
+                  >
+                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                  </div>
+                }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="custom-pixel-card"
+              />
+            </div>
+          </div>
+
+          <div className="project-card" onClick={() => window.open('https://github.com/madebyhooman/MLFQ', '_blank')}>
+            <div className="card-tab">
+              <span className="tab-icon">⚙️</span>
+              <span className="tab-title">Algorithm Implementation</span>
+            </div>
+            <div className="card-body">
+              <PixelTransition
+                firstContent={
+                  <img
+                    src='/images/mlfq.png' alt='Multi Level Feedback Queue'
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                }
+                secondContent={
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "grid",
+                      placeItems: "center",
+                      backgroundColor: "#1F1A28"
+                    }}
+                  >
+                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                  </div>
+                }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="custom-pixel-card"
+              />
+            </div>
+          </div>
+
+          <div className="project-card" onClick={() => window.open('https://github.com/madebyhooman/proj-rizal', '_blank')}>
+            <div className="card-tab">
+              <span className="tab-icon">🎞️</span>
+              <span className="tab-title">Online Photo Gallery</span>
+            </div>
+            <div className="card-body">
+              <PixelTransition
+                firstContent={
+                  <img
+                    src='/images/online-gallery.png' alt='Smart Bin'
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                }
+                secondContent={
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "grid",
+                      placeItems: "center",
+                      backgroundColor: "#1F1A28"
+                    }}
+                  >
+                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                  </div>
+                }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="custom-pixel-card"
+              />
+            </div>
+          </div>
+
+          <div className="project-card" onClick={() => window.open('https://github.com/madebyhooman/ordering-system', '_blank')}>
+            <div className="card-tab">
+              <span className="tab-icon">🎟️</span>
+              <span className="tab-title">Ordering System</span>
+            </div>
+            <div className="card-body">
+              <PixelTransition
+                firstContent={
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "grid",
+                      placeItems: "center",
+                      backgroundColor: "#2A2A2A"
+                    }}
+                  >
+                    <span style={{ fontSize: "4rem" }}>🎟️</span>
+                  </div>
+                }
+                secondContent={
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "grid",
+                      placeItems: "center",
+                      backgroundColor: "#1F1A28"
+                    }}
+                  >
+                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                  </div>
+                }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="custom-pixel-card"
+              />
             </div>
           </div>
         </div>
+
+
       </div>
 
       {/* Footer */}
