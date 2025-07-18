@@ -41,7 +41,7 @@ function App() {
                       <span className="tab-title">Smart Surveillance System</span>
                     </div>
                     <div className="card-body">
-                      <h3>Python, OpenCV, TensorFlow, YOLO</h3>
+                      <h3>Python, Dart</h3>
                       <p>A smart surveillance system that uses AI for real-time monitoring and alerts.</p>
                     </div>
                   </Card>
@@ -71,7 +71,7 @@ function App() {
                       <span className="tab-title">Ordering System</span>
                     </div>
                     <div className="card-body">
-                      <h3>HTML, CSS, PHP, JavaScript, SQL, Json</h3>
+                      <h3>HTML, CSS, PHP, JavaScript, SQL</h3>
                       <p>Develop a comprehensive ordering system with user authentication and data management.</p>
                     </div>
                   </Card>
@@ -127,18 +127,36 @@ function App() {
                       justifyContent: "center",
                       alignItems: "center",
                       backgroundColor: "#1F1A28",
-                      padding: "1rem",
-                      textAlign: "center",
+                      textAlign: "center"
                     }}
                   >
-                    <p style={{ fontWeight: 700, fontSize: "1rem", color: "#ffffff", marginBottom: "0.5rem" }}>
+                    <p style={{ 
+                      fontWeight: 700, 
+                      fontSize: "1rem", 
+                      color: "#ffffff", 
+                      maxWidth: "90%" 
+                      }}>
                       Arduino-based smart trash bin that uses sensors to detect waste levels and optimize collection.
                     </p>
-                    <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "#ccc" }}>
-                      Technologies: Arduino, Ultrasonic Sensor, C++
+                    <p style={{ 
+                      fontStyle: "italic", 
+                      fontSize: "0.9rem", 
+                      color: "#ccc" 
+                      }}>
+                      <strong>Technologies:</strong> Arduino, Ultrasonic Sensor, C++
                     </p>
+                    <p style={{ 
+                      fontStyle: "italic", 
+                      fontSize: "0.9rem", 
+                      color: "#ccc", 
+                      }}>
+                      <strong>Language:</strong> Python, Dart</p>
                   </div>
                 }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="custom-pixel-card"
               />
             </div>
           </div>
@@ -161,12 +179,29 @@ function App() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      display: "grid",
-                      placeItems: "center",
-                      backgroundColor: "#1F1A28"
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#1F1A28",
+                      textAlign: "center"
                     }}
                   >
-                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                    <p style={{ 
+                      fontWeight: 700, 
+                      fontSize: "1rem", 
+                      color: "#ffffff", 
+                      maxWidth: "90%" 
+                      }}>
+                      A smart surveillance system that uses AI for real-time monitoring and alerts.
+                    </p>
+                    <p style={{ 
+                      fontStyle: "italic", 
+                      fontSize: "0.9rem", 
+                      color: "#ccc" 
+                      }}>
+                      <strong>Technologies:</strong> Python, Dart
+                    </p>
                   </div>
                 }
                 gridSize={12}
@@ -195,12 +230,29 @@ function App() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      display: "grid",
-                      placeItems: "center",
-                      backgroundColor: "#1F1A28"
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#1F1A28",
+                      textAlign: "center"
                     }}
                   >
-                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                    <p style={{ 
+                      fontWeight: 700, 
+                      fontSize: "1rem", 
+                      color: "#ffffff", 
+                      maxWidth: "90%" 
+                      }}>
+                      A program that automatically calculates and generates a Gantt chart with detailed computations presented in a table.
+                    </p>
+                    <p style={{ 
+                      fontStyle: "italic", 
+                      fontSize: "0.9rem", 
+                      color: "#ccc" 
+                      }}>
+                      <strong>Technologies:</strong> C++
+                    </p>
                   </div>
                 }
                 gridSize={12}
@@ -229,12 +281,29 @@ function App() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      display: "grid",
-                      placeItems: "center",
-                      backgroundColor: "#1F1A28"
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#1F1A28",
+                      textAlign: "center"
                     }}
                   >
-                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                    <p style={{ 
+                      fontWeight: 700, 
+                      fontSize: "1rem", 
+                      color: "#ffffff", 
+                      maxWidth: "90%" 
+                      }}>
+                      Build a responsive photo gallery showcasing behind the scenes content.
+                    </p>
+                    <p style={{ 
+                      fontStyle: "italic", 
+                      fontSize: "0.9rem", 
+                      color: "#ccc" 
+                      }}>
+                      <strong>Language:</strong> HTML, CSS, JavaScript
+                    </p>
                   </div>
                 }
                 gridSize={12}
@@ -270,12 +339,29 @@ function App() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      display: "grid",
-                      placeItems: "center",
-                      backgroundColor: "#1F1A28"
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#1F1A28",
+                      textAlign: "center"
                     }}
                   >
-                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                    <p style={{ 
+                      fontWeight: 700, 
+                      fontSize: "1rem", 
+                      color: "#ffffff", 
+                      maxWidth: "90%" 
+                      }}>
+                      Develop a comprehensive ordering system with user authentication and data management.
+                    </p>
+                    <p style={{ 
+                      fontStyle: "italic", 
+                      fontSize: "0.9rem", 
+                      color: "#ccc" 
+                      }}>
+                      <strong>Language:</strong> HTML, CSS, PHP, JavaScript, SQL
+                    </p>
                   </div>
                 }
                 gridSize={12}
