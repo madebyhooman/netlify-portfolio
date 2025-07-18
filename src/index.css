@@ -13,6 +13,7 @@ body {
 html, #root {
   height: 100vh;
 }
+
 .App {
   position: relative;
   min-height: 100vh;
@@ -31,7 +32,7 @@ html, #root {
   flex: 1;
   position: relative;
   z-index: 1;
-  padding: 2rem;
+  padding: 4rem;
   color: white;
 }
 
@@ -53,22 +54,26 @@ html, #root {
   text-align: left;
 }
 
+.left-column header {
+  max-width: 500px;
+}
+
+.left-column header h3 {
+  position: relative;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.left-column header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
 .right-column {
   flex: 1;
-  min-width: 300px;
+  /*min-width: 450px;*/
   z-index: 1;
   justify-content: center;
-}
-
-.left-column header {
-  max-width: 400px;
-  padding: 1rem;
-}
-
-.right-column {
-  flex: 1;
-  min-width: 450px;
-  z-index: 1;
 }
 
 .under-development-section {
@@ -136,7 +141,7 @@ html, #root {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
 }
 
 .project-card {
@@ -171,6 +176,11 @@ html, #root {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.card-description {
+  padding: 1rem;
+  color: #f1f1f1;
 }
 
 
@@ -214,7 +224,7 @@ code {
 
 @media (min-width: 1200px) {
   .projects-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

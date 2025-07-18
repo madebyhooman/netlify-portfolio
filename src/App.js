@@ -21,15 +21,16 @@ function App() {
           <div className="two-column">
             <div className="left-column">
               <header>
-                <h1>Hi, I'm Maydelene Chavez</h1>
+                <h3>Hi, I'm </h3>
+                <h1>Maydelene Chavez</h1>
                 <p>Web Developer | Designer | Learner</p>
               </header>
             </div>
 
             <div className="right-column" onClick={handleRightColumnClick}>
-              <div style={{ height: '600px', position: 'relative' }}>
+              <div style={{ height: '550px', position: 'relative' }}>
                 <CardSwap
-                  cardDistance={30}
+                  cardDistance={20}
                   verticalDistance={120}
                   delay={4000}
                   pauseOnHover={false}
@@ -111,7 +112,8 @@ function App() {
               <PixelTransition
                 firstContent={
                   <img
-                    src='/images/smart-bin.png' alt='Smart Bin'
+                    src="/images/smart-bin.png"
+                    alt="Smart Bin"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 }
@@ -120,18 +122,23 @@ function App() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      display: "grid",
-                      placeItems: "center",
-                      backgroundColor: "#1F1A28"
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#1F1A28",
+                      padding: "1rem",
+                      textAlign: "center",
                     }}
                   >
-                    <p style={{ textAlign:"center", fontWeight: 900, fontSize: "2rem", color: "#ffffff" }}>Click to view repository!</p>
+                    <p style={{ fontWeight: 700, fontSize: "1rem", color: "#ffffff", marginBottom: "0.5rem" }}>
+                      Arduino-based smart trash bin that uses sensors to detect waste levels and optimize collection.
+                    </p>
+                    <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "#ccc" }}>
+                      Technologies: Arduino, Ultrasonic Sensor, C++
+                    </p>
                   </div>
                 }
-                gridSize={12}
-                pixelColor='#ffffff'
-                animationStepDuration={0.4}
-                className="custom-pixel-card"
               />
             </div>
           </div>
