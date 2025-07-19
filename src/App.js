@@ -452,6 +452,7 @@ function App() {
           <a href="https://github.com/madebyhooman" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/maydelenechavez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:maydelene.p.chavez@gmail.com">Email</a>
+          <a href="https://www.upwork.com/freelancers/~011f6012f08bd67800?mp_source=share_profile" target="_blank" rel="noopener noreferrer">Upwork</a>
         </div>
       </footer>
     </div>
